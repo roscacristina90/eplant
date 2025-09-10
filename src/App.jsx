@@ -1,9 +1,7 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProductList from './ProductList';
 import './App.css';
-import AboutUs from './AboutUs';
-
 function App() {
   
   const [showProductList, setShowProductList] = useState(false);
@@ -20,20 +18,18 @@ function App() {
          <div className="landing_content">
          <h1>Welcome To Paradise Nursery</h1>
           <div className="divider"></div>
-          <p>Where Green Meets Serenity</p>
+          <p>Where Green Meets Serenity, Every Breath Feels New.</p>
          
           <button className="get-started-button" onClick={handleGetStartedClick}>
-            Get Started
+            Get Started Now
           </button>
          </div>
-          <div className="aboutus_container">
-          <AboutUs/>
-          </div>
+          
           </div>
 
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList />
+        <ProductList startWithShop={true} />
       </div>
     </div>
   );
